@@ -1,0 +1,6 @@
+- name: "Update servers"
+  hosts: "{{ target if target is defined else 'apt_servers' }}"
+  become: true
+
+  roles:
+    - update
